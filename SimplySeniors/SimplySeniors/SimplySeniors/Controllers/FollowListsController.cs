@@ -91,10 +91,12 @@ namespace SimplySeniors.Controllers
 
                 };
             }
+
+            return View(followList);
         }
 
 
-            public ActionResult Follow(int id)
+        public ActionResult Follow(int id)
             {
                 string uid = User.Identity.GetUserId();
                 Profile currentUser = db1.Profiles.Where(x => x.USERID == uid).FirstOrDefault();
